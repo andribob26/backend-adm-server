@@ -52,9 +52,9 @@ app.use(
     saveUninitialized: false,
     resave: false,
     cookie: {
-      secure: true,
-      httpOnly: true,
-      sameSite: "none",
+      secure: false,
+      httpOnly: false,
+      sameSite: false,
       maxAge: 1000 * 60 * 60 * 24,
     },
   })
