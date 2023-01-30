@@ -50,10 +50,11 @@ app.use(
     store: store,
     secret: process.env.SECRET,
     saveUninitialized: true,
-    resave: true,
+    resave: false,
+    name: 'MyCoolWebAppCookieName',
     cookie: {
       secure: true,
-      httpOnly: true,
+      httpOnly: false,
       sameSite: "none",
       maxAge: 1000 * 60 * 60 * 24,
     },
