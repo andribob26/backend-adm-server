@@ -33,7 +33,7 @@ const store = new (require("connect-pg-simple")(session))({
 
 app.use(
   cors({
-    origin: "https://frontend-adm-app.vercel.app",
+    origin: "https://adm-app-inky.vercel.app",
     // origin: "http://localhost:3000",
     credentials: true,
   })
@@ -52,10 +52,10 @@ app.use(
     secret: process.env.SECRET,
     saveUninitialized: false,
     resave: false,
-    proxy: true, // Required for Heroku & Digital Ocean (regarding X-Forwarded-For)
-    name: "MyCoolWebAppCookieName", // This needs to be unique per-host.
+    proxy: true, 
+    name: "MyCoolWebAppCookieName",
     cookie: {
-      secure: true, // required for cookies to work on HTTPS
+      secure: true, 
       httpOnly: false,
       sameSite: "none",
       maxAge: 1000 * 60 * 60 * 24,
