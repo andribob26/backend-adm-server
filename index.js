@@ -49,13 +49,13 @@ app.use(
   session({
     store: store,
     secret: process.env.SECRET,
-    saveUninitialized: true,
+    saveUninitialized: false,
     resave: false,
     name: 'MyCoolWebAppCookieName',
     cookie: {
-      secure: true,
+      secure: false,
       httpOnly: false,
-      sameSite: "none",
+      sameSite: false,
       maxAge: 1000 * 60 * 60 * 24,
     },
   })
