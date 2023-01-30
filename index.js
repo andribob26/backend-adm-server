@@ -33,7 +33,7 @@ const store = new (require("connect-pg-simple")(session))({
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://frontend-adm-app.vercel.app",
     credentials: true,
   })
 );
