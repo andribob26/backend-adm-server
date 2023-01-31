@@ -52,12 +52,15 @@ app.use(
     secret: process.env.SECRET,
     saveUninitialized: false,
     resave: false,
-    proxy: true, 
+    proxy: true,
     name: "MyCoolWebAppCookieName",
     cookie: {
-      secure: true, 
+      secure: true,
       httpOnly: false,
       sameSite: "none",
+      // secure: false,
+      // httpOnly: false,
+      // sameSite: false,
       maxAge: 1000 * 60 * 60 * 24,
     },
   })
